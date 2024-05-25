@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Program Interface</title>
+    <script>
+        function runProgram() {
+            // Task 1: Displaying whether numbers from 0 to 10 are odd or even
+            document.getElementById("oddEvenNumbers").innerHTML = "<h2>Odd or Even Numbers from 0 to 10:</h2>";
+            for (let i = 0; i <= 10; i++) {
+                if (i % 2 === 0) {
+                    document.getElementById("oddEvenNumbers").innerHTML += "Count " + i + " is even<br>";
+                } else {
+                    document.getElementById("oddEvenNumbers").innerHTML += "Count " + i + " is odd<br>";
+                }
+            }
+
+            // Task 2: Asking user for a number between 5 and 20 and using it in a Do While loop
+            let myNum;
+            do {
+                myNum = parseInt(prompt("Enter a number between 5 and 20:"));
+            } while (myNum < 5 || myNum > 20);
+
+            document.getElementById("countingNumbers").innerHTML = "<h2>Counting from 1 to " + myNum + ":</h2>";
+            let counter = 1;
+            do {
+                document.getElementById("countingNumbers").innerHTML += "Count: " + counter + "<br>";
+                counter++;
+            } while (counter <= myNum);
+
+            // Task 3: Storing subjects in an array and displaying them using forEach()
+            let subjects = ["Accounting", "Algebra", "Programming", "Art", "Data Analytics"];
+
+            document.getElementById("subjects").innerHTML = "<h2>Subjects:</h2>";
+            document.getElementById("subjects").innerHTML += "<p>Using forEach():</p>";
+            subjects.forEach(function(subject) {
+                document.getElementById("subjects").innerHTML += subject + "<br>";
+            });
+
+            document.getElementById("subjects").innerHTML += "<p>Separated by commas:</p>";
+            document.getElementById("subjects").innerHTML += subjects.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="runProgram()">Run JavaScript Program</button>
+    <div id="oddEvenNumbers"></div>
+    <div id="countingNumbers"></div>
+    <div id="subjects"></div>
+</body>
+</html>
