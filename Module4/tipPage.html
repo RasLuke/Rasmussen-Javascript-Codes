@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <h2>Tip Calculator</h2>
+    <p>Enter the dollar amount of the service:</p>
+    <input type="number" id="serviceAmount" step="0.01" min="5" max="500">
+    <p>How was the service quality?</p>
+    <select id="serviceQuality">
+        <option value="great">Great</option>
+        <option value="ok">OK</option>
+        <option value="poor">Poor</option>
+    </select>
+    <br><br>
+    <button onclick="calculateAndDisplayTip()">Calculate Tip</button>
+    <script src="tipCalc.js"></script>
+</body>
+</html>
