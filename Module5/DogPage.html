@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fictional Dog Info</title>
+</head>
+<body>
+    <button onclick="displayDogInfo()">Click here for dog info</button>
+    <div id="dogInfo"></div>
+    <!-- Image element to display the picture of the dog -->
+    <img src="dog_picture.jpg" alt="Picture of Big Dog" id="dogImage" style="display: none;">
+
+    <script src="dogInfo.js"></script>
+    <script>
+        // Function to display the dog info when button is clicked
+        function displayDogInfo() {
+            var dogInfoDiv = document.getElementById('dogInfo');
+            var dogImage = document.getElementById('dogImage');
+
+            // Show the image of the dog
+            dogImage.style.display = 'block';
+
+            // Set the text content with line breaks after breed info
+            dogInfoDiv.innerHTML = myDogConst.myGreeting().replace('Unknown breed', 'Unknown breed. <br>');
+        }
+    </script>
+</body>
+</html>
