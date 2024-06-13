@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fictional Dog Info</title>
+</head>
+<body>
+    <p>The only dog options are Scooby-Doo and Big Dog</p>
+    <button onclick="displayDogInfo()">Click here for dog info</button>
+    <div id="dogInfo"></div>
+
+    <script src="dogInfo.js"></script>
+    <script>
+        // Function to display the dog info when button is clicked
+        function displayDogInfo() {
+            // Set up the dogInfoDiv and dogImage variables
+            var dogInfoDiv = document.getElementById('dogInfo');
+ 
+            // Set the text content with line breaks after breed info
+            dogInfoDiv.innerHTML = selectedDog ? selectedDog.myGreeting().replace('Unknown breed', 'Unknown breed. <br>') : "Please select a dog first.";
+        }
+    </script>
+</body>
+</html>
